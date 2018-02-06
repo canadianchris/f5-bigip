@@ -1,0 +1,16 @@
+---
+- name: Manage BIG-IP systems
+  vars:
+    BIGIP_SERVER:
+    BIGIP_USER:
+    BIGIP_PASSWORD:
+    
+  tasks:
+  
+    - name: Collect BIG-IP facts
+      bigip_facts:
+        server: "lb.mydomain.com"
+        user: "admin"
+        password: "secret"
+        include: "interface,vlan"
+      delegate_to: localhost
