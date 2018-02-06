@@ -2,6 +2,7 @@
 - name: Manage BIG-IP systems
   connection: local
   hosts:  tag_Name_big_ip
+  gather_facts: false
   tasks:
     - name: Collect BIG-IP facts
       bigip_facts:
