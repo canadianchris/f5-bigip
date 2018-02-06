@@ -1,12 +1,7 @@
 ---
 - name: Manage BIG-IP systems
-  vars:
-    BIGIP_SERVER:
-    BIGIP_USER:
-    BIGIP_PASSWORD:
-    
+  hosts:  tag_Name_big_ip
   tasks:
-  
     - name: Collect BIG-IP facts
       bigip_facts:
         server: "{{ BIGIP_SERVER }}"
