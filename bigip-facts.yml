@@ -9,4 +9,5 @@
         user: "{{ BIGIP_USER }}"
         password: "{{ BIGIP_PASSWORD }}"
         include: "interface,vlan"
+        validate_certs: "false"
       delegate_to: localhost
