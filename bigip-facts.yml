@@ -9,8 +9,8 @@
   
     - name: Collect BIG-IP facts
       bigip_facts:
-        server: "lb.mydomain.com"
-        user: "admin"
-        password: "secret"
+        server: "{{ BIGIP_SERVER }}"
+        user: "{{ BIGIP_USER }}"
+        password: "{{ BIGIP_PASSWORD }}"
         include: "interface,vlan"
       delegate_to: localhost
