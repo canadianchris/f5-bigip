@@ -5,7 +5,7 @@
   tasks:
     - name: Collect BIG-IP facts
       bigip_facts:
-        server: "{{ BIGIP_SERVER }}"
+        server: "{{ inventory_hostname }}"
         user: "{{ BIGIP_USER }}"
         password: "{{ BIGIP_PASSWORD }}"
         include: "interface,vlan"
